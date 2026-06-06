@@ -21,7 +21,7 @@ export default function App() {
     setError("");
     setSignals([]);
     try {
-      const res = await axios.post("http://localhost:3000/analyse", { transcript });
+      const res = await axios.post("https://project-drab-eight-13.vercel.app/analyse", { transcript });
       setSignals(res.data.signals || []);
     } catch (err) {
       setError("Something went wrong. Make sure the backend is running.");
